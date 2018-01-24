@@ -76,23 +76,23 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                   <li class="nav-item">
-                        <a class="nav-link link text-white display-7" href="#">
+                        <a class="nav-link link text-white display-7" href="../#inicio">
                           <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
                             INICIO
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link text-white display-7" href="#servicio"><span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>
+                        <a class="nav-link link text-white display-7" href="../#servicio"><span class="mbri-delivery mbr-iconfont mbr-iconfont-btn"></span>
                             SERVICIOS</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link link text-white display-7" href="#proyecto">
+                      <a class="nav-link link text-white display-7" href="../#proyecto">
                         <span class="mbri-cash mbr-iconfont mbr-iconfont-btn"></span>
                          PROYECTOS
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link link text-white display-7" href="#contacto">
+                      <a class="nav-link link text-white display-7" href="../#contacto">
                         <span class="mbri-letter mbr-iconfont mbr-iconfont-btn"></span>
                             CONTACTANOS
                      </a>
@@ -105,19 +105,22 @@
     </div>
     <section class="features3 esquemaServicio" id="features3-l">
       <br><br><br>
-      <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-3">
-          <?php
-            require_once '../Datos/jsonServicios.php';
-            $numeroServicio = $_GET['id'];
-            if ($numeroServicio < 0 || $numeroServicio > sizeOf($arraylistServicios)) {
-                $numeroServicio = 0;
-            }
-             print_r($arraylistServicios[$numeroServicio]->nombre_servicio);
-           ?>
-      </h2>
+      <div class="col-12 col-md-12 col-lg-12">
+        <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+
+            <?php
+              require_once '../Datos/jsonServicios.php';
+              $numeroServicio = $_GET['id'];
+              if ($numeroServicio < 0 || $numeroServicio > sizeOf($arraylistServicios)) {
+                  $numeroServicio = 0;
+              }
+               print_r($arraylistServicios[$numeroServicio]->nombre_servicio);
+             ?>
+        </h2>
+      </div>
       <br>
       <div class="media-container-row">
-        <div class="col-12 col-md-6 col-lg-6">
+        <div class="col-12 col-md-12 col-lg-12">
           <p class="textoServicios mbr-fonts-style display-7 centrarTexto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida purus mauris, et tincidunt ipsum mattis ac. Mauris sit amet porta leo. Duis luctus, purus in sagittis sagittis, orci nunc imperdiet erat, sit amet gravida risus nisi nec justo. Donec est sem, condimentum non convallis sit amet, consequat quis turpis. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique cursus neque non ultrices. Fusce ullamcorper tellus quis nulla euismod, et feugiat ipsum rutrum.
 
@@ -130,23 +133,113 @@
             Phasellus eros orci, euismod eu sem et, iaculis rhoncus mauris. Praesent accumsan interdum turpis eget scelerisque. Nunc tellus nibh, suscipit vitae feugiat blandit, tincidunt ac quam. Phasellus vehicula leo a mi vestibulum tincidunt. Aenean eget accumsan eros. Curabitur lobortis orci in cursus auctor. In aliquam elit a mi semper consectetur non ut ligula. Etiam molestie ornare lacus eget consectetur. Quisque malesuada quis elit a dictum. Fusce vel dolor eu felis tincidunt pellentesque. Quisque eget odio tristique, condimentum mauris in, placerat elit. In urna risus, viverra ut mi quis, bibendum vehicula eros. Cras quis libero non elit condimentum luctus. Nulla rhoncus orci leo, venenatis tempus justo convallis sit amet. Integer nulla arcu, semper sit amet consequat vitae, commodo et purus. Vivamus tellus ex, posuere id interdum in, posuere sit amet nisi.
           </p>
         </div>
-
-        <div class="col-12 col-md-6 col-lg-6">
-          aca van las fotos
-        </div>
-      </div>
-      <div class="media-container-row">
-        <div class="col-12 col-md-4 col-lg-4">
-          <div class="botonServicios text-center posicionarAbajo">
-              <a href="../#servicio" class="btn btn-primary display-4">
-                  ¿QUIERES VER MAS SERVICIOS?
-              </a>
-          </div>
-        </div>
       </div>
     </section>
 
 
+    <section class="mbr-gallery mbr-slider-carousel cid-qHtuqvMmT3" id="gallery1-k">
+        <div id="proyecto" class="container">
+          <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
+              GALERIA DE IMAGENES
+          </h2>
+            <div>
+              <!-- Filter --><!-- Gallery -->
+              <div class="mbr-gallery-row">
+                <div class="mbr-gallery-layout-default">
+                  <div>
+                    <div>
+                      <?php
+                      require_once '../Datos/jsonServicios.php';
+                      for ($i=0; $i < sizeof($arraylistServicios[$numeroServicio]->listado_imagenes); $i++) {?>
+                      <div class="mbr-gallery-item mbr-gallery-item--p4" data-video-url="false" data-tags="Awesome">
+                        <div href="#lb-gallery1-k" data-slide-to="<?php print_r($i)?>" data-toggle="modal">
+                          <img src="<?php print_r($arraylistServicios[$numeroServicio]->listado_imagenes[$i]);?>" alt="">
+                          <span class="icon-focus"></span>
+                          <span class="mbr-gallery-title mbr-fonts-style display-7"><?php print_r($arraylistServicios[$numeroServicio]->listado_titulo_imagen[$i]); ?></span>
+                        </div>
+                      </div>
+                    <?php } ?>
+                    <!-- Ejemplo original de como va
+                      <div class="mbr-gallery-item mbr-gallery-item--p4" data-video-url="false" data-tags="Responsive">
+                        <div href="#lb-gallery1-k" data-slide-to="1" data-toggle="modal">
+                          <img src="assets/images/gallery01.jpg" alt="">
+                          <span class="icon-focus"></span>
+                          <span class="mbr-gallery-title mbr-fonts-style display-7">Type caption here</span>
+                        </div>
+                      </div>
+                    -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearfix">
+                  </div>
+              </div>
+            </div>
+            <!-- Lightbox -->
+            <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery1-k">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <ol class="carousel-indicators">
+                      <!--Cerrar llave de php -->
+                      <li data-app-prevent-settings="" data-target="#lb-gallery1-k" class=" active" data-slide-to="0"></li>
+                      <?php for ($i=1; $i < sizeof($arraylist); $i++) {?>
+                        <li data-app-prevent-settings="" data-target="#lb-gallery1-k" data-slide-to="<?php print_r($i)?>"></li>
+                      <?php } ?>
+                      <!--Ejemplo original
+                      <li data-app-prevent-settings="" data-target="#lb-gallery1-k" data-slide-to="7"></li>
+                      -->
+                    </ol>
+                    <div class="carousel-inner">
+                      <!-- Dejar la primera Obra la nro 00 Activa-->
+                      <div class="carousel-item active">
+                        <img src="<?php print_r($arraylist[0]->url_imagen);?>" alt="">
+                        <span class="mbr-gallery-title mbr-fonts-style display-7">
+                          <?php print_r($arraylist[0]->nombre_obra);?>
+                          <a href="#" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                        </span>
+                      </div>
+                      <?php for ($i=1; $i < sizeof($arraylist); $i++) {?>
+                      <div class="carousel-item">
+                        <img src="<?php print_r($arraylist[$i]->url_imagen);?>" alt="">
+                        <span class="mbr-gallery-title mbr-fonts-style display-7">
+                          <?php print_r($arraylist[$i]->nombre_obra);?>
+                          <a href="#" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                        </span>
+                      </div>
+                    <?php }?>
+                      <!-- EJEMPLO ORIGINAL
+                      <div class="carousel-item">
+                        <img src="assets/images/gallery07.jpg" alt="">
+                      </div>
+                      -->
+                  </div>
+                  <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery1-k">
+                    <span class="mbri-left mbr-iconfont" aria-hidden="true"></span>
+                    <span class="sr-only">ATRAS</span>
+                  </a>
+                  <a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#lb-gallery1-k">
+                    <span class="mbri-right mbr-iconfont" aria-hidden="true"></span>
+                    <span class="sr-only">SIGUIENTE</span>
+                  </a>
+                  <a class="close" href="#" role="button" data-dismiss="modal">
+                    <span class="sr-only">CERRAR</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+           </div>
+         </div>
+    </section>
+    <div class="media-container-row">
+      <div class="col-12 col-md-4 col-lg-4">
+        <div class="botonServicios text-center posicionarAbajo">
+            <a href="../#servicio" class="btn btn-primary display-4">
+                ¿QUIERES VER MAS SERVICIOS?
+            </a>
+        </div>
+      </div>
+    </div>
     <section class="cid-qHtuLem0Nj mbr-parallax-background" id="footer2-n">
         <div class="container">
             <div class="media-container-row content mbr-white">

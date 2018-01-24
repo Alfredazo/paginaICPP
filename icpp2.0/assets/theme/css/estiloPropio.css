@@ -24,3 +24,10 @@
     display: none;
   }
 }
+
+.imagenServicios{
+  width: 80%;
+  height: 60%;
+  padding-right: 10px;
+  padding-left: 80px;
+}
