@@ -1,0 +1,26 @@
+.centrarContenido{
+  text-align: center;
+}
+.moverDerecha{
+  padding-left: 70% !important;
+}
+.alturaTarjeta{
+  min-height: 669px !important;
+}
+.cid-qHtuvBns9I p{
+  text-align: justify !important;
+}
+.posicionarAbajo{
+  bottom: 0px !important;
+}
+
+@media screen and (max-width: 320px) {
+  div#textoEmpresa {
+    display: block;
+  }
+}
+@media screen and (max-width: 320px) {
+  div#textoEmpresa2 {
+    display: none;
+  }
+}
