@@ -183,7 +183,7 @@
                     <ol class="carousel-indicators">
                       <!--Cerrar llave de php -->
                       <li data-app-prevent-settings="" data-target="#lb-gallery1-k" class=" active" data-slide-to="0"></li>
-                      <?php for ($i=1; $i < sizeof($arraylist); $i++) {?>
+                      <?php for ($i=1; $i < sizeof($arraylistServicios[$numeroServicio]->listado_imagenes); $i++) {?>
                         <li data-app-prevent-settings="" data-target="#lb-gallery1-k" data-slide-to="<?php print_r($i)?>"></li>
                       <?php } ?>
                       <!--Ejemplo original
@@ -193,18 +193,16 @@
                     <div class="carousel-inner">
                       <!-- Dejar la primera Obra la nro 00 Activa-->
                       <div class="carousel-item active">
-                        <img src="<?php print_r($arraylist[0]->url_imagen);?>" alt="">
+                        <img src="<?php print_r($arraylistServicios[$numeroServicio]->listado_imagenes[0]);?>" alt="">
                         <span class="mbr-gallery-title mbr-fonts-style display-7">
-                          <?php print_r($arraylist[0]->nombre_obra);?>
-                          <a href="#" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                          <?php print_r($arraylistServicios[$numeroServicio]->listado_titulo_imagen[0]);?>
                         </span>
                       </div>
-                      <?php for ($i=1; $i < sizeof($arraylist); $i++) {?>
+                      <?php for ($i=1; $i < sizeof($arraylistServicios[$numeroServicio]->listado_imagenes); $i++) {?>
                       <div class="carousel-item">
-                        <img src="<?php print_r($arraylist[$i]->url_imagen);?>" alt="">
+                        <img src="<?php print_r($arraylistServicios[$numeroServicio]->listado_imagenes[$i]);?>" alt="">
                         <span class="mbr-gallery-title mbr-fonts-style display-7">
-                          <?php print_r($arraylist[$i]->nombre_obra);?>
-                          <a href="#" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                          <?php print_r($arraylistServicios[$numeroServicio]->listado_titulo_imagen[$i]);?>
                         </span>
                       </div>
                     <?php }?>
@@ -255,31 +253,31 @@
                 <div class="col-12 col-md-2">
 
                 </div>
-                <div class="col-12 col-md-8">
-                  <form class="mbr-form" action="#" method="post">
+                <div class="col-12 col-md-8" id="contacto">
+                  <form class="mbr-form" action="../Contacto/contacto.php" method="post">                    
                       <div class="row row-sm-offset">
                           <div class="col-md-4 multi-horizontal" data-for="name">
                               <div class="form-group">
                                   <label class="form-control-label mbr-fonts-style display-7" for="name-form1-m">Nombre</label>
-                                  <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="name-form1-m">
+                                  <input type="text" class="form-control" name="nombre" data-form-field="Name" required="" id="name-form1-m">
                               </div>
                           </div>
                           <div class="col-md-4 multi-horizontal" data-for="email">
                               <div class="form-group">
                                   <label class="form-control-label mbr-fonts-style display-7" for="email-form1-m">Correo Electronico</label>
-                                  <input type="email" class="form-control" name="email" data-form-field="Email" required="" id="email-form1-m">
+                                  <input type="email" class="form-control" name="correo" data-form-field="Email" required="" id="email-form1-m">
                               </div>
                           </div>
                           <div class="col-md-4 multi-horizontal" data-for="phone">
                               <div class="form-group">
                                   <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-m">Nro° Contacto</label>
-                                  <input type="tel" class="form-control" name="phone" data-form-field="Phone" id="phone-form1-m">
+                                  <input type="tel" class="form-control" name="telefono" data-form-field="Phone" id="phone-form1-m">
                               </div>
                           </div>
                       </div>
                       <div class="form-group" data-for="message">
                           <label class="form-control-label mbr-fonts-style display-7" for="message-form1-m">Mensaje</label>
-                          <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message-form1-m"></textarea>
+                          <textarea type="text" class="form-control" name="mensaje" rows="7" data-form-field="Message" id="message-form1-m"></textarea>
                       </div>
 
                       <span class="input-group-btn">

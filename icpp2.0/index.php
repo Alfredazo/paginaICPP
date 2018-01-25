@@ -19,7 +19,6 @@
   <link rel="stylesheet" href="assets/gallery/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   <link rel="stylesheet" href="assets/theme/css/estiloPropio.css">
-
   <script>
         function mostrarNombreEmpresaSegunTamaño() {
           if (screen.width == 320) {
@@ -39,7 +38,6 @@
           console.log("Mi resolución de pantalla es: "+ + " px por "+screen.height);
         }
   </script>
-
 </head>
 <body>
   <div class="servicios">
@@ -213,7 +211,7 @@
           PROYECTOS
       </h2>
         <div>
-          <!-- Filter --><!-- Gallery -->
+          <!-- Gallery -->
           <div class="mbr-gallery-row">
             <div class="mbr-gallery-layout-default">
               <div>
@@ -334,30 +332,33 @@
             <div class="media-container-column col-lg-8" data-form-type="formoid">
 
 
-                    <form class="mbr-form" action="https://mobirise.com/" method="post">
+                    <form class="mbr-form" action="Contacto/contacto.php" method="post">
+                      <?php
+                        $_SESSION['INICIADA1'] = "ok";
+                       ?>
                         <div class="row row-sm-offset">
                             <div class="col-md-4 multi-horizontal" data-for="name">
                                 <div class="form-group">
                                     <label class="form-control-label mbr-fonts-style display-7" for="name-form1-m">Nombre</label>
-                                    <input type="text" class="form-control" name="name" data-form-field="Name" required="" id="name-form1-m">
+                                    <input type="text" class="form-control" name="nombre" data-form-field="Name" required="" id="name-form1-m">
                                 </div>
                             </div>
                             <div class="col-md-4 multi-horizontal" data-for="email">
                                 <div class="form-group">
                                     <label class="form-control-label mbr-fonts-style display-7" for="email-form1-m">Correo Electronico</label>
-                                    <input type="email" class="form-control" name="email" data-form-field="Email" required="" id="email-form1-m">
+                                    <input type="email" class="form-control" name="correo" data-form-field="Email" required="" id="email-form1-m">
                                 </div>
                             </div>
                             <div class="col-md-4 multi-horizontal" data-for="phone">
                                 <div class="form-group">
                                     <label class="form-control-label mbr-fonts-style display-7" for="phone-form1-m">Nro° Contacto</label>
-                                    <input type="tel" class="form-control" name="phone" data-form-field="Phone" id="phone-form1-m">
+                                    <input type="tel" class="form-control" name="telefono" data-form-field="Phone" id="phone-form1-m">
                                 </div>
                             </div>
                         </div>
                         <div class="form-group" data-for="message">
                             <label class="form-control-label mbr-fonts-style display-7" for="message-form1-m">Mensaje</label>
-                            <textarea type="text" class="form-control" name="message" rows="7" data-form-field="Message" id="message-form1-m"></textarea>
+                            <textarea type="text" class="form-control" name="mensaje" rows="7" data-form-field="Message" id="message-form1-m"></textarea>
                         </div>
 
                         <span class="input-group-btn">

@@ -32,9 +32,9 @@ $json = '[
                                     "../assets/images/servicios/servicio1.jpg"
                                  ],
             "listado_titulo_imagen":[
-                                     "MANTENIMIENTO GRUA",
-                                     "CONSTRUCCIÓN EDIFICIO",
-                                     "EDIFICACIÓN GRUA"
+                                     "GRUA MONTAJE",
+                                     "MONTAJE EDIFICIO",
+                                     "MONTAJE ALGO GRUA"
                                     ]
 
           },
