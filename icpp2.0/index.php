@@ -330,12 +330,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="media-container-column col-lg-8" data-form-type="formoid">
-
-
-                    <form class="mbr-form" action="Contacto/contacto.php" method="post">
-                      <?php
-                        $_SESSION['INICIADA1'] = "ok";
-                       ?>
+              <div class="loader2"></div>
+                    <form id="ajax-contact" class="mbr-form" action="Contacto/contacto.php" method="post">
                         <div class="row row-sm-offset">
                             <div class="col-md-4 multi-horizontal" data-for="name">
                                 <div class="form-group">
@@ -361,9 +357,13 @@
                             <textarea type="text" class="form-control" name="mensaje" rows="7" data-form-field="Message" id="message-form1-m"></textarea>
                         </div>
 
-                        <span class="input-group-btn">
-                            <button href="" type="submit" class="btn btn-primary btn-form display-4">ENVIAR MENSAJE</button>
-                        </span>
+                        <div class="row">
+                          <span class="input-group-btn col-12 col-md-6">
+                              <button type="submit" class="btn btn-primary btn-form display-4">ENVIAR MENSAJE</button>
+                          </span>
+                          <div id="respuesta" class="MensajeContacto col-12 col-md-6">
+                          </div>
+                        </div>
                     </form>
             </div>
         </div>
@@ -429,6 +429,27 @@
   <script src="assets/gallery/player.min.js"></script>
   <script src="assets/gallery/script.js"></script>
 
+  <script type="text/javascript">
+          $(document).ready(function () {
+            $('.loader2').hide();
+              $('#ajax-contact').submit(function () {
+                  $(".loader2").fadeOut("slow");
+                  $(".loader2").fadeIn("slow");
+                  $('#respuesta').hide();
+                  $.ajax({
+                      type: 'POST',
+                      url: "Contacto/contacto.php",
+                      data: $(this).serialize(),
+                      success: function (data) {
+                          $('#respuesta').html(data);
+                          $(".loader2").hide("slow");
+                          $('#respuesta').fadeIn('slow');
+                      }
+                  })
+                  return false;
+              });
+          });
+  </script>
 
 </body>
 </html>

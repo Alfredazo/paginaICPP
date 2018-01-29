@@ -251,10 +251,10 @@
                     </p><p></p>
                 </div>
                 <div class="col-12 col-md-2">
-
                 </div>
                 <div class="col-12 col-md-8" id="contacto">
-                  <form class="mbr-form" action="../Contacto/contacto.php" method="post">                    
+                  <div class="loader"></div>
+                  <form id="ajax-contact" class="mbr-form" action="../Contacto/contacto.php" method="post">
                       <div class="row row-sm-offset">
                           <div class="col-md-4 multi-horizontal" data-for="name">
                               <div class="form-group">
@@ -279,13 +279,15 @@
                           <label class="form-control-label mbr-fonts-style display-7" for="message-form1-m">Mensaje</label>
                           <textarea type="text" class="form-control" name="mensaje" rows="7" data-form-field="Message" id="message-form1-m"></textarea>
                       </div>
-
-                      <span class="input-group-btn">
-                          <button href="" type="submit" class="btn btn-primary btn-form display-4">ENVIAR MENSAJE</button>
-                      </span>
+                      <div class="row">
+                        <span class="input-group-btn col-12 col-md-6">
+                            <button type="submit" class="btn btn-primary btn-form display-4">ENVIAR MENSAJE</button>
+                        </span>
+                        <div id="respuesta" class="MensajeContacto col-12 col-md-6">
+                        </div>
+                      </div>
                   </form>
-                </div>
-            </div>
+
             <div class="footer-lower">
                 <div class="media-container-row">
                     <div class="col-sm-12">
@@ -305,7 +307,6 @@
         </div>
     </section>
 
-
   <script src="../assets/web/assets/jquery/jquery.min.js"></script>
   <script src="../assets/popper/popper.min.js"></script>
   <script src="../assets/tether/tether.min.js"></script>
@@ -323,5 +324,27 @@
   <script src="../assets/slidervideo/script.js"></script>
   <script src="../assets/gallery/player.min.js"></script>
   <script src="../assets/gallery/script.js"></script>
+
+  <script type="text/javascript">
+          $(document).ready(function () {
+              $('.loader').hide();
+              $('#ajax-contact').submit(function () {
+                  $(".loader").fadeOut("slow");
+                  $(".loader").fadeIn("slow");
+                  $('#respuesta').hide();
+                  $.ajax({
+                      type: 'POST',
+                      url: "../Contacto/contacto.php",
+                      data: $(this).serialize(),
+                      success: function (data) {
+                          $('#respuesta').html(data);
+                          $(".loader").hide("slow");
+                          $('#respuesta').fadeIn('slow');
+                      }
+                  })
+                  return false;
+              });
+          });
+  </script>
   </body>
 </html>

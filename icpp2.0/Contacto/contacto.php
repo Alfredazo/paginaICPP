@@ -6,7 +6,11 @@ use PHPMailer\PHPMailer\Exception;
 
 //Load composer's autoloader
 require '../vendor/autoload.php';
-  if(isset($_POST['nombre']))
+  if(isset($_POST['nombre'])&&
+    isset($_POST['correo']) &&
+    isset($_POST['telefono'])&&
+    isset($_POST['mensaje'])
+    )
   {
     $fecha = date("d/m/Y");
     $mail = new PHPMailer(true);
@@ -40,23 +44,21 @@ require '../vendor/autoload.php';
         $mensaje = $_POST['mensaje'];
 
 
-        $mail->Body    = "NOMBRE CONTACTO:      ".$nombre.
-                         "<br>CORREO ELECTRONICO:   ".$correo.
-                         "<br>NRO° TELEFONICO:      ".$telefono.
-                         "<br>MENSAJE: <br>".$mensaje.
+        $mail->Body    = "<h3>NOMBRE CONTACTO:          ".$nombre. "</h3>".
+                         "<h3>CORREO ELECTRONICO:       ".$correo."</h3>".
+                         "<h3>NRO° TELEFONICO:          ".$telefono."</h3>".
+                         "<h3>MENSAJE:</h3>"."<p>".$mensaje."</p>".
                          "<br><br><br><br>".getRealIP();
 
         $mail->send();
-        $mensaje = 'Enviado Correctamente';
-        header('Location: /icpp2.0/#contacto');
+        echo "Mensaje Enviado Correctamente";
+        //header('Location: /icpp2.0/#contacto');
     } catch (Exception $e) {
-        $mensaje = 'No se pudo Enviar';
-        echo $mensaje;
+        echo 'No se pudo Enviar';
+        //echo $mensaje;
 
     }
   }else{
-    $mensaje = 'No se pudo Enviar';
-    echo $mensaje;
     header('Location: /icpp2.0/#contacto');
   }
 
