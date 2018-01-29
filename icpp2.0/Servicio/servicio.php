@@ -122,16 +122,8 @@
       <div class="media-container-row">
         <div class="col-12 col-md-12 col-lg-12">
           <p class="textoServicios mbr-fonts-style display-7 centrarTexto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida purus mauris, et tincidunt ipsum mattis ac. Mauris sit amet porta leo. Duis luctus, purus in sagittis sagittis, orci nunc imperdiet erat, sit amet gravida risus nisi nec justo. Donec est sem, condimentum non convallis sit amet, consequat quis turpis. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique cursus neque non ultrices. Fusce ullamcorper tellus quis nulla euismod, et feugiat ipsum rutrum.
-
-            Aliquam eu lorem porttitor, convallis felis vel, auctor purus. Fusce quis nisi urna. Mauris nec nibh fermentum, feugiat felis eu, porta lectus. Suspendisse sit amet mattis sapien. Maecenas vel varius dui. Integer consequat euismod enim eget blandit. Praesent bibendum non purus ut pulvinar. Pellentesque in diam laoreet, congue justo vel, blandit lacus. Sed sagittis, tellus a gravida convallis, velit sem ornare tortor, a vestibulum justo augue ac metus. Donec tristique neque ut magna tristique placerat. Donec ultricies sollicitudin libero, sed ultrices justo molestie vitae. Integer et mauris porta, maximus magna ac, suscipit nunc.
-
-            Maecenas est lacus, condimentum rutrum laoreet vitae, lobortis non sapien. Nulla facilisi. Sed venenatis dolor quis nunc mattis, a tempor quam scelerisque. Nullam justo eros, pretium in iaculis ut, efficitur sit amet mi. Proin accumsan quis urna vel placerat. Duis sed mi nec purus viverra gravida eget varius eros. Mauris ac venenatis libero. Vestibulum nunc ligula, commodo id efficitur non, blandit eget elit.
-
-            Quisque nec metus sed leo euismod interdum id quis arcu. Suspendisse id orci eget neque semper finibus et vel nulla. Vivamus consequat neque vel lectus mollis luctus. Donec in accumsan neque. Nulla ut condimentum eros, et scelerisque felis. Cras scelerisque enim lorem, eget euismod lacus tempor eu. Integer laoreet ultricies leo nec porta. Quisque sit amet nulla lectus. Suspendisse ligula justo, posuere eu posuere quis, ullamcorper placerat sapien. Pellentesque id odio a ipsum consectetur maximus ornare vel quam. Phasellus cursus urna eleifend augue sagittis, pulvinar consectetur odio tempor. Nulla elementum varius cursus. Quisque lectus eros, finibus sit amet odio vitae, imperdiet rhoncus est. Vivamus blandit nulla id elit suscipit mattis.
-
-            Phasellus eros orci, euismod eu sem et, iaculis rhoncus mauris. Praesent accumsan interdum turpis eget scelerisque. Nunc tellus nibh, suscipit vitae feugiat blandit, tincidunt ac quam. Phasellus vehicula leo a mi vestibulum tincidunt. Aenean eget accumsan eros. Curabitur lobortis orci in cursus auctor. In aliquam elit a mi semper consectetur non ut ligula. Etiam molestie ornare lacus eget consectetur. Quisque malesuada quis elit a dictum. Fusce vel dolor eu felis tincidunt pellentesque. Quisque eget odio tristique, condimentum mauris in, placerat elit. In urna risus, viverra ut mi quis, bibendum vehicula eros. Cras quis libero non elit condimentum luctus. Nulla rhoncus orci leo, venenatis tempus justo convallis sit amet. Integer nulla arcu, semper sit amet consequat vitae, commodo et purus. Vivamus tellus ex, posuere id interdum in, posuere sit amet nisi.
-          </p>
+            <?php print_r($arraylistServicios[$numeroServicio]->descripcion) ?>
+         </p>
         </div>
       </div>
     </section>

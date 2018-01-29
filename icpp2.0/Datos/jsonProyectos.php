@@ -7,13 +7,33 @@ $json = '[
             "numero_imagen":"0",
             "nombre_obra":"AV INFANTE",
             "descripcion": "REPARACIÓN BLA BLA BLA BLA DESCRIPCIÓN ESTE PUEDE SER UN TEXTO GIGANTE LIMAHUIDA",
-            "url_imagen": "assets/images/proyectos/gallery00.jpg"
+            "url_imagen": "assets/images/proyectos/avInfante/gallery00.jpg",
+            "listado_imagenes":  [
+                                    "../assets/images/servicios/servicio1.jpg",
+                                    "../assets/images/servicios/servicio2.jpg",
+                                    "../assets/images/servicios/servicio1.jpg"
+                                 ],
+            "listado_titulo_imagen":[
+                                     "MANTENIMIENTO GRUA",
+                                     "CONSTRUCCIÓN EDIFICIO",
+                                     "EDIFICACIÓN GRUA"
+                                    ]
           },
           {
             "numero_imagen":"1",
             "nombre_obra":"ASCENSOR VILLASECA",
             "descripcion": "REPARACIÓN BLA BLA BLA BLA DESCRIPCIÓN ESTE PUEDE SER UN TEXTO GIGANTE LIMAHUIDA",
-            "url_imagen": "assets/images/proyectos/gallery00.jpg"
+            "url_imagen": "assets/images/proyectos/lasCañas/gallery00.jpg",
+            "listado_imagenes":  [
+                                    "../assets/images/servicios/servicio1.jpg",
+                                    "../assets/images/servicios/servicio2.jpg",
+                                    "../assets/images/servicios/servicio1.jpg"
+                                 ],
+            "listado_titulo_imagen":[
+                                     "MANTENIMIENTO GRUA",
+                                     "CONSTRUCCIÓN EDIFICIO",
+                                     "EDIFICACIÓN GRUA"
+                                    ]
           },
           {
             "numero_imagen":"2",

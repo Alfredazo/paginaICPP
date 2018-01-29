@@ -264,7 +264,7 @@
                     <img src="<?php print_r($arraylist[0]->url_imagen);?>" alt="">
                     <span class="mbr-gallery-title mbr-fonts-style display-7">
                       <?php print_r($arraylist[0]->nombre_obra);?>
-                      <a href="#" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                      <a href="Servicio/servicio.php?id=0" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
                     </span>
                   </div>
                   <?php for ($i=1; $i < sizeof($arraylist); $i++) {?>
@@ -272,7 +272,7 @@
                     <img src="<?php print_r($arraylist[$i]->url_imagen);?>" alt="">
                     <span class="mbr-gallery-title mbr-fonts-style display-7">
                       <?php print_r($arraylist[$i]->nombre_obra);?>
-                      <a href="#" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                      <a href="Proyecto/proyecto.php?id=<?php print_r($arraylist[$i]->numero_imagen)?>" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
                     </span>
                   </div>
                 <?php }?>
