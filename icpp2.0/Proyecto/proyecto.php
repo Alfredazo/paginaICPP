@@ -110,7 +110,11 @@
 
             <?php
               require_once '../Datos/jsonProyectos.php';
-              $numeroProyecto = $_GET['id'];
+              if (isset($_GET['id'])==false) {
+                 $numeroProyecto = 0;
+              }else{
+                $numeroProyecto = $_GET['id'];
+              }
               if ($numeroProyecto < 0 || $numeroProyecto > sizeOf($arraylist)) {
                   $numeroProyecto = 0;
               }
@@ -122,7 +126,7 @@
       <div class="media-container-row">
         <div class="col-12 col-md-12 col-lg-12">
           <p class="textoServicios mbr-fonts-style display-7 centrarTexto">
-            <?php print_r($arraylist[$numeroProyecto]->descripcion); ?>            
+            <?php print_r($arraylist[$numeroProyecto]->descripcion); ?>
           </p>
         </div>
       </div>

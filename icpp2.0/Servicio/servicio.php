@@ -110,7 +110,11 @@
 
             <?php
               require_once '../Datos/jsonServicios.php';
-              $numeroServicio = $_GET['id'];
+              if (isset($_GET['id'])==false) {
+                 $numeroServicio = 0;
+              }else{
+                $numeroServicio = $_GET['id'];
+              }
               if ($numeroServicio < 0 || $numeroServicio > sizeOf($arraylistServicios)) {
                   $numeroServicio = 0;
               }
@@ -333,7 +337,7 @@
                           document.getElementById("name-form1-m").value = "";
                           document.getElementById("email-form1-m").value = "";
                           document.getElementById("phone-form1-m").value = "";
-                          document.getElementById("message-form1-m").value = "";   
+                          document.getElementById("message-form1-m").value = "";
                           $(".loader").hide("slow");
                           $('#respuesta').fadeIn('slow');
                       }

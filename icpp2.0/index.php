@@ -38,7 +38,9 @@
           console.log("Mi resolución de pantalla es: "+ + " px por "+screen.height);
         }
   </script>
+  
 <body>
+  <div>
     <section class="menu cid-qHcGPx0DPO" once="menu" id="menu2-i">
       <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -297,18 +299,50 @@
        </div>
      </div>
 </section>
+
 <section>
-  <div id="servicio" class="container">
+  <div id="clientes" class="container">
     <br><br><br>
     <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
         CLIENTES
     </h2>
     <br>
-      <div class="media-container-row">
-          <div class="col-12 col-md-6 col-lg-4">
-                      <img src="assets/images/01.jpg" alt="Mobirise">
-          </div>
-      </div>
+    <?php
+      require_once 'Datos/jsonClientes.php';
+      for ($i=0; $i < sizeof($arraylistClientes);$i++) {
+        /* REALIZAR MATRIZ PARA VERIFICAR LOS NUMEROS
+            0  1 2
+            3  4 5
+            6  7 8
+            Donde la fila izquierda es la empezada del div y la fila derecha es la terminada ejemplo (Inicio:0 - Final:2)
+       */
+        if ($i==0 || $i==3) {
+          print_r('<div class="media-container-row">');
+        }
+        ?>
+        <div class="card p-3 col-12 col-md-6 col-lg-4">
+            <div class="card-wrapper">
+                <div class="card-img imagenClientes">
+                    <img clas="" src="<?php print_r($arraylistClientes[$i]->url_imagen)?>" alt="<?php print_r($arraylistClientes[$i]->nombre_cliente);?>">
+                </div>
+                <div class="card-box">
+                    <h4 id="textoCliente" class="margenTitulos card-title mbr-fonts-style display-7">
+                        <?php print_r($arraylistClientes[$i]->nombre_cliente); ?>
+                    </h4>
+                </div>
+            </div>
+        </div>
+
+          <!-- REALIZAR MATRIZ PARA VERIFICAR LOS NUMEROS
+              0  1 2
+              3  4 5
+              6  7 8
+              Donde la fila izquierda es la empezada del div y la fila derecha es la terminada ejemplo (Inicio:0 - Final:2)
+        -->
+            <?php if ($i==2 || $i==5) {
+              print_r('</div>');
+            } ?>
+    <?php } ?>
   </div>
 </section>
 
@@ -380,12 +414,7 @@
 
                 </p><p></p>
             </div>
-            <div class="col-12 col-md-4 mbr-fonts-style display-7">
-                <p class="mbr-text"><br>
-                    <br><br>
-                    <br><br></p>
-            </div>
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-9">
                 <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJEfWHkXTeiZYRw3axtsNfmRA" allowfullscreen=""></iframe></div>
             </div>
         </div>
@@ -443,7 +472,7 @@
                           document.getElementById("name-form1-m").value = "";
                           document.getElementById("email-form1-m").value = "";
                           document.getElementById("phone-form1-m").value = "";
-                          document.getElementById("message-form1-m").value = "";                                                  
+                          document.getElementById("message-form1-m").value = "";
                           $(".loader2").hide("slow");
                           $('#respuesta').fadeIn('slow');
                       }

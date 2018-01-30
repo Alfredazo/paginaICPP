@@ -57,3 +57,13 @@
     background: url('../../images/logo.gif') 50% 50% no-repeat rgb(249,249,249);
     opacity: .8;
 }
+
+.imagenClientes{
+  height: 90px !important;
+  width: 90px !important;
+  margin:auto;
+}
+.margenTitulos{
+  padding-top: 75px;
+  text-align: -webkit-center;
+}

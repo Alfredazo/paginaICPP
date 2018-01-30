@@ -1399,6 +1399,7 @@ body {
 }
 .cid-qHtuvBns9I .card-box {
   padding: 0 2rem;
+  margin-bottom: 100px !important;
 }
 .cid-qHtuvBns9I .mbr-section-btn {
   padding-top: 1rem;
@@ -1427,7 +1428,7 @@ body {
 }
 .cid-qHtuvBns9I .card-wrapper {
   height: 100%;
-  min-height: 689px;
+  min-height: 800px;
   padding-bottom: 2rem;
   background: #ffffff;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
