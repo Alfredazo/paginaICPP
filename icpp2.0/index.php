@@ -38,9 +38,7 @@
           console.log("Mi resolución de pantalla es: "+ + " px por "+screen.height);
         }
   </script>
-</head>
 <body>
-  <div class="servicios">
     <section class="menu cid-qHcGPx0DPO" once="menu" id="menu2-i">
       <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm bg-color transparent">
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -431,7 +429,7 @@
 
   <script type="text/javascript">
           $(document).ready(function () {
-            $('.loader2').hide();
+              $('.loader2').hide();
               $('#ajax-contact').submit(function () {
                   $(".loader2").fadeOut("slow");
                   $(".loader2").fadeIn("slow");
@@ -442,6 +440,10 @@
                       data: $(this).serialize(),
                       success: function (data) {
                           $('#respuesta').html(data);
+                          document.getElementById("name-form1-m").value = "";
+                          document.getElementById("email-form1-m").value = "";
+                          document.getElementById("phone-form1-m").value = "";
+                          document.getElementById("message-form1-m").value = "";                                                  
                           $(".loader2").hide("slow");
                           $('#respuesta').fadeIn('slow');
                       }

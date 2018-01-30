@@ -7,7 +7,7 @@ $json = '[
             "numero_servicio":"0",
             "nombre_servicio":"OBRAS CIVILES",
             "descripcion": "Estamos preparados para concebir, planificar, diseñar, construir operar y mantener obras estructurales y de infraestructuras destinadas a aprovechar y  a transformar los recursos naturales en beneficio de la satisfacción eficiente, segura, justa, económica y sustentable de las necesidades materiales de la sociedad.",
-            "url_imagen":"assets/images/servicios/servicio1.jpg",
+            "url_imagen":"assets/images/servicios/obrasCiviles/servicio1.jpg",
             "url_imagen_servicios":"../assets/images/servicios/obrasCiviles/servicio1.jpg",
              "listado_imagenes":  [
                                      "../assets/images/servicios/obrasCiviles/obra1.jpg",

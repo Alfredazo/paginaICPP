@@ -44,9 +44,9 @@ require '../vendor/autoload.php';
         $mensaje = $_POST['mensaje'];
 
 
-        $mail->Body    = "<h3>NOMBRE CONTACTO:          ".$nombre. "</h3>".
-                         "<h3>CORREO ELECTRONICO:       ".$correo."</h3>".
-                         "<h3>NRO° TELEFONICO:          ".$telefono."</h3>".
+        $mail->Body    = "<h3>Nombre Contacto:          ".$nombre. "</h3>".
+                         "<h3>Correo:       ".$correo."</h3>".
+                         "<h3>Telefono:          ".$telefono."</h3>".
                          "<h3>MENSAJE:</h3>"."<p>".$mensaje."</p>".
                          "<br><br><br><br>".getRealIP();
 

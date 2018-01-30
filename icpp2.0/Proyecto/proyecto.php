@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>SERVICIOS</title>
+    <title>PROYECTO</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
@@ -109,12 +109,12 @@
         <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
 
             <?php
-              require_once '../Datos/jsonServicios.php';
-              $numeroServicio = $_GET['id'];
-              if ($numeroServicio < 0 || $numeroServicio > sizeOf($arraylistServicios)) {
-                  $numeroServicio = 0;
+              require_once '../Datos/jsonProyectos.php';
+              $numeroProyecto = $_GET['id'];
+              if ($numeroProyecto < 0 || $numeroProyecto > sizeOf($arraylist)) {
+                  $numeroProyecto = 0;
               }
-               print_r($arraylistServicios[$numeroServicio]->nombre_servicio);
+               print_r($arraylist[$numeroProyecto]->nombre_obra);
              ?>
         </h2>
       </div>
@@ -122,15 +122,7 @@
       <div class="media-container-row">
         <div class="col-12 col-md-12 col-lg-12">
           <p class="textoServicios mbr-fonts-style display-7 centrarTexto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas gravida purus mauris, et tincidunt ipsum mattis ac. Mauris sit amet porta leo. Duis luctus, purus in sagittis sagittis, orci nunc imperdiet erat, sit amet gravida risus nisi nec justo. Donec est sem, condimentum non convallis sit amet, consequat quis turpis. Aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin tristique cursus neque non ultrices. Fusce ullamcorper tellus quis nulla euismod, et feugiat ipsum rutrum.
-
-            Aliquam eu lorem porttitor, convallis felis vel, auctor purus. Fusce quis nisi urna. Mauris nec nibh fermentum, feugiat felis eu, porta lectus. Suspendisse sit amet mattis sapien. Maecenas vel varius dui. Integer consequat euismod enim eget blandit. Praesent bibendum non purus ut pulvinar. Pellentesque in diam laoreet, congue justo vel, blandit lacus. Sed sagittis, tellus a gravida convallis, velit sem ornare tortor, a vestibulum justo augue ac metus. Donec tristique neque ut magna tristique placerat. Donec ultricies sollicitudin libero, sed ultrices justo molestie vitae. Integer et mauris porta, maximus magna ac, suscipit nunc.
-
-            Maecenas est lacus, condimentum rutrum laoreet vitae, lobortis non sapien. Nulla facilisi. Sed venenatis dolor quis nunc mattis, a tempor quam scelerisque. Nullam justo eros, pretium in iaculis ut, efficitur sit amet mi. Proin accumsan quis urna vel placerat. Duis sed mi nec purus viverra gravida eget varius eros. Mauris ac venenatis libero. Vestibulum nunc ligula, commodo id efficitur non, blandit eget elit.
-
-            Quisque nec metus sed leo euismod interdum id quis arcu. Suspendisse id orci eget neque semper finibus et vel nulla. Vivamus consequat neque vel lectus mollis luctus. Donec in accumsan neque. Nulla ut condimentum eros, et scelerisque felis. Cras scelerisque enim lorem, eget euismod lacus tempor eu. Integer laoreet ultricies leo nec porta. Quisque sit amet nulla lectus. Suspendisse ligula justo, posuere eu posuere quis, ullamcorper placerat sapien. Pellentesque id odio a ipsum consectetur maximus ornare vel quam. Phasellus cursus urna eleifend augue sagittis, pulvinar consectetur odio tempor. Nulla elementum varius cursus. Quisque lectus eros, finibus sit amet odio vitae, imperdiet rhoncus est. Vivamus blandit nulla id elit suscipit mattis.
-
-            Phasellus eros orci, euismod eu sem et, iaculis rhoncus mauris. Praesent accumsan interdum turpis eget scelerisque. Nunc tellus nibh, suscipit vitae feugiat blandit, tincidunt ac quam. Phasellus vehicula leo a mi vestibulum tincidunt. Aenean eget accumsan eros. Curabitur lobortis orci in cursus auctor. In aliquam elit a mi semper consectetur non ut ligula. Etiam molestie ornare lacus eget consectetur. Quisque malesuada quis elit a dictum. Fusce vel dolor eu felis tincidunt pellentesque. Quisque eget odio tristique, condimentum mauris in, placerat elit. In urna risus, viverra ut mi quis, bibendum vehicula eros. Cras quis libero non elit condimentum luctus. Nulla rhoncus orci leo, venenatis tempus justo convallis sit amet. Integer nulla arcu, semper sit amet consequat vitae, commodo et purus. Vivamus tellus ex, posuere id interdum in, posuere sit amet nisi.
+            <?php print_r($arraylist[$numeroProyecto]->descripcion); ?>            
           </p>
         </div>
       </div>
@@ -138,7 +130,7 @@
 
 
     <section class="mbr-gallery mbr-slider-carousel cid-qHtuqvMmT3" id="gallery1-k">
-        <div id="proyecto" class="container">
+        <div class="container">
           <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2">
               GALERIA DE IMAGENES
           </h2>
@@ -149,13 +141,13 @@
                   <div>
                     <div>
                       <?php
-                      require_once '../Datos/jsonServicios.php';
-                      for ($i=0; $i < sizeof($arraylistServicios[$numeroServicio]->listado_imagenes); $i++) {?>
+                      require_once '../Datos/jsonProyectos.php';
+                      for ($i=0; $i < sizeof($arraylist[$numeroProyecto]->listado_imagenes); $i++) {?>
                       <div class="mbr-gallery-item mbr-gallery-item--p4" data-video-url="false" data-tags="Awesome">
                         <div href="#lb-gallery1-k" data-slide-to="<?php print_r($i)?>" data-toggle="modal">
-                          <img src="<?php print_r($arraylistServicios[$numeroServicio]->listado_imagenes[$i]);?>" alt="">
+                          <img src="<?php print_r($arraylist[$numeroProyecto]->listado_imagenes[$i]);?>" alt="">
                           <span class="icon-focus"></span>
-                          <span class="mbr-gallery-title mbr-fonts-style display-7"><?php print_r($arraylistServicios[$numeroServicio]->listado_titulo_imagen[$i]); ?></span>
+                          <span class="mbr-gallery-title mbr-fonts-style display-7"><?php print_r($arraylist[$numeroProyecto]->listado_titulo_imagen[$i]); ?></span>
                         </div>
                       </div>
                     <?php } ?>
@@ -183,7 +175,7 @@
                     <ol class="carousel-indicators">
                       <!--Cerrar llave de php -->
                       <li data-app-prevent-settings="" data-target="#lb-gallery1-k" class=" active" data-slide-to="0"></li>
-                      <?php for ($i=1; $i < sizeof($arraylistServicios[$numeroServicio]->listado_imagenes); $i++) {?>
+                      <?php for ($i=1; $i < sizeof($arraylist[$numeroProyecto]->listado_imagenes); $i++) {?>
                         <li data-app-prevent-settings="" data-target="#lb-gallery1-k" data-slide-to="<?php print_r($i)?>"></li>
                       <?php } ?>
                       <!--Ejemplo original
@@ -193,16 +185,16 @@
                     <div class="carousel-inner">
                       <!-- Dejar la primera Obra la nro 00 Activa-->
                       <div class="carousel-item active">
-                        <img src="<?php print_r($arraylistServicios[$numeroServicio]->listado_imagenes[0]);?>" alt="">
+                        <img src="<?php print_r($arraylist[$numeroProyecto]->listado_imagenes[0]);?>" alt="">
                         <span class="mbr-gallery-title mbr-fonts-style display-7">
-                          <?php print_r($arraylistServicios[$numeroServicio]->listado_titulo_imagen[0]);?>
+                          <?php print_r($arraylist[$numeroProyecto]->listado_titulo_imagen[0]);?>
                         </span>
                       </div>
-                      <?php for ($i=1; $i < sizeof($arraylistServicios[$numeroServicio]->listado_imagenes); $i++) {?>
+                      <?php for ($i=1; $i < sizeof($arraylist[$numeroProyecto]->listado_imagenes); $i++) {?>
                       <div class="carousel-item">
-                        <img src="<?php print_r($arraylistServicios[$numeroServicio]->listado_imagenes[$i]);?>" alt="">
+                        <img src="<?php print_r($arraylist[$numeroProyecto]->listado_imagenes[$i]);?>" alt="">
                         <span class="mbr-gallery-title mbr-fonts-style display-7">
-                          <?php print_r($arraylistServicios[$numeroServicio]->listado_titulo_imagen[$i]);?>
+                          <?php print_r($arraylist[$numeroProyecto]->listado_titulo_imagen[$i]);?>
                         </span>
                       </div>
                     <?php }?>
@@ -232,8 +224,8 @@
     <div class="media-container-row">
       <div class="col-12 col-md-4 col-lg-4">
         <div class="botonServicios text-center posicionarAbajo">
-            <a href="../#servicio" class="btn btn-primary display-4">
-                ¿QUIERES VER MAS SERVICIOS?
+            <a href="../#proyecto" class="btn btn-primary display-4">
+                ¿QUIERES VER MAS PROYECTOS?
             </a>
         </div>
       </div>
@@ -338,6 +330,10 @@
                       data: $(this).serialize(),
                       success: function (data) {
                           $('#respuesta').html(data);
+                          document.getElementById("name-form1-m").value = "";
+                          document.getElementById("email-form1-m").value = "";
+                          document.getElementById("phone-form1-m").value = "";
+                          document.getElementById("message-form1-m").value = "";
                           $(".loader").hide("slow");
                           $('#respuesta').fadeIn('slow');
                       }

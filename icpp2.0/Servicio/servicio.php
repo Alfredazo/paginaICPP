@@ -330,6 +330,10 @@
                       data: $(this).serialize(),
                       success: function (data) {
                           $('#respuesta').html(data);
+                          document.getElementById("name-form1-m").value = "";
+                          document.getElementById("email-form1-m").value = "";
+                          document.getElementById("phone-form1-m").value = "";
+                          document.getElementById("message-form1-m").value = "";   
                           $(".loader").hide("slow");
                           $('#respuesta').fadeIn('slow');
                       }
