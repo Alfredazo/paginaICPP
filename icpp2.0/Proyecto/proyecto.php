@@ -125,7 +125,7 @@
       <br>
       <div class="media-container-row">
         <div class="col-12 col-md-12 col-lg-12">
-          <p class="textoServicios mbr-fonts-style display-7 centrarTexto">
+          <p class="alineacionDescripcion textoServicios mbr-fonts-style display-7 centrarTexto">
             <?php print_r($arraylist[$numeroProyecto]->descripcion); ?>
           </p>
         </div>
@@ -151,7 +151,6 @@
                         <div href="#lb-gallery1-k" data-slide-to="<?php print_r($i)?>" data-toggle="modal">
                           <img src="<?php print_r($arraylist[$numeroProyecto]->listado_imagenes[$i]);?>" alt="">
                           <span class="icon-focus"></span>
-                          <span class="mbr-gallery-title mbr-fonts-style display-7"><?php print_r($arraylist[$numeroProyecto]->listado_titulo_imagen[$i]); ?></span>
                         </div>
                       </div>
                     <?php } ?>
@@ -191,14 +190,14 @@
                       <div class="carousel-item active">
                         <img src="<?php print_r($arraylist[$numeroProyecto]->listado_imagenes[0]);?>" alt="">
                         <span class="mbr-gallery-title mbr-fonts-style display-7">
-                          <?php print_r($arraylist[$numeroProyecto]->listado_titulo_imagen[0]);?>
+                          <?php print_r($arraylist[$numeroProyecto]->nombre_corto_obra); ?>
                         </span>
                       </div>
                       <?php for ($i=1; $i < sizeof($arraylist[$numeroProyecto]->listado_imagenes); $i++) {?>
                       <div class="carousel-item">
                         <img src="<?php print_r($arraylist[$numeroProyecto]->listado_imagenes[$i]);?>" alt="">
                         <span class="mbr-gallery-title mbr-fonts-style display-7">
-                          <?php print_r($arraylist[$numeroProyecto]->listado_titulo_imagen[$i]);?>
+                          <?php print_r($arraylist[$numeroProyecto]->nombre_corto_obra); ?>
                         </span>
                       </div>
                     <?php }?>

@@ -1,5 +1,6 @@
 <?php
   /*Variable Array*/
+  $imagenes_aVillaseca = count(glob('../aVillaseca/{*.jpg,*.gif,*.png,*.JPG}',GLOB_BRACE));
 
 /*Datos PROYECTOS Actuales*/
 $json = '[
@@ -13,27 +14,38 @@ $json = '[
                                     "../assets/images/proyectos/gallery00.jpg",
                                     "../assets/images/proyectos/gallery00.jpg"
                                  ],
-            "listado_titulo_imagen":[
-                                     "TEXTO FOTO 1",
-                                     "TEXTO FOTO 2",
-                                     "TEXTO FOTO 3"
-                                    ]
+            "nombre_corto_obra":"Reparación Av. Infante"
           },
           {
             "numero_imagen":"1",
-            "nombre_obra":"ASCENSOR VILLASECA",
-            "descripcion": "REPARACIÓN BLA BLA BLA BLA DESCRIPCIÓN ESTE PUEDE SER UN TEXTO GIGANTE LIMAHUIDA",
-            "url_imagen": "assets/images/proyectos/lasCañas/gallery00.jpg",
-            "listado_imagenes":  [
-                                    "../assets/images/servicio2.jpg",
-                                    "../assets/images/servicio2.jpg",
-                                    "../assets/images/servicio2.jpg"
-                                 ],
-            "listado_titulo_imagen":[
-                                     "MANTENIMIENTO GRUA",
-                                     "CONSTRUCCIÓN EDIFICIO",
-                                     "EDIFICACIÓN GRUA"
-                                    ]
+            "nombre_obra":"RESTAURACIÓN ASCENSOR VILLASECA DE VALPARAÍSO",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi laoreet lobortis vulputate. Sed vel metus ut quam mollis fringilla. Vestibulum dolor felis, malesuada eget diam ut, euismod ultrices magna. Donec in nulla pharetra, pretium libero a, condimentum dui. Duis pulvinar ante et ipsum convallis, sit amet porta ante luctus. Morbi hendrerit elit orci. Maecenas ullamcorper justo in sodales aliquet. Nam id nulla vel magna mollis semper eu et diam. Aenean dignissim aliquam imperdiet. In hac habitasse platea dictumst. Vivamus eget risus et velit semper aliquam. Nulla facilisi. Praesent quis eros et tortor scelerisque posuere.Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vehicula sodales felis sed hendrerit. Curabitur pretium, sapien tempus consectetur viverra, sapien magna tempus tellus, eu euismod neque lectus sodales risus. Curabitur pulvinar augue vel diam finibus, sit amet rutrum ante fermentum. Nullam eget urna aliquam, mollis justo non, sagittis sem. Ut a velit facilisis, blandit neque a, faucibus mi. Nunc sodales mauris nibh, non mollis sapien mollis et.",
+            "url_imagen": "assets/images/proyectos/aVillaseca/1.jpg",
+            "listado_imagenes": ["../assets/images/proyectos/aVillaseca/1.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/2.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/3.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/4.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/5.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/6.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/7.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/8.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/9.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/10.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/11.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/12.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/13.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/14.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/15.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/16.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/17.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/18.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/19.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/20.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/21.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/22.jpg" ,
+                                "../assets/images/proyectos/aVillaseca/23.jpg" ,
+                              "../assets/images/proyectos/aVillaseca/24.jpg"],
+              "nombre_corto_obra":"Reparación Ascensor Villaseca"
           },
           {
             "numero_imagen":"2",

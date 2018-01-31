@@ -24,6 +24,16 @@ body {
   line-height: 1.6;
   text-align: justify;
 }
+
+@media screen and (min-width: 768px) {
+  .alineacionDescripcion{
+      margin: auto;
+      padding-left: 100px;
+      padding-right: 100px;
+  }
+}
+
+
 .textoServicios2 {
   font-style: normal;
   line-height: 1.6;

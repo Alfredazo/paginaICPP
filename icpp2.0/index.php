@@ -38,7 +38,7 @@
           console.log("Mi resolución de pantalla es: "+ + " px por "+screen.height);
         }
   </script>
-  
+
 <body>
   <div>
     <section class="menu cid-qHcGPx0DPO" once="menu" id="menu2-i">
@@ -316,7 +316,7 @@
             6  7 8
             Donde la fila izquierda es la empezada del div y la fila derecha es la terminada ejemplo (Inicio:0 - Final:2)
        */
-        if ($i==0 || $i==3) {
+        if ($i==0 || $i==3 || $i==6 || $i==9 || $i==12 || $i==15) {
           print_r('<div class="media-container-row">');
         }
         ?>
@@ -337,9 +337,12 @@
               0  1 2
               3  4 5
               6  7 8
+              9 10 11
+              12 13 14
+              15 16 17
               Donde la fila izquierda es la empezada del div y la fila derecha es la terminada ejemplo (Inicio:0 - Final:2)
         -->
-            <?php if ($i==2 || $i==5) {
+            <?php if ($i==2 || $i==5 || $i==8 || $i ==11 || $i==14 || $i==17) {
               print_r('</div>');
             } ?>
     <?php } ?>
@@ -419,14 +422,12 @@
             </div>
         </div>
         <div class="footer-lower">
-            <div class="media-container-row">
-                <div class="col-sm-12">
-                    <hr>
-                </div>
-            </div>
             <div class="media-container-row mbr-white">
-                <div class="col-sm-12 col-md-6 copyright">
-                    <p class="mbr-text mbr-fonts-style display-7">
+                <div class="col-md-2">
+
+                </div>
+                <div class="col-sm-12 col-md-10 copyright">
+                    <p class="margenTitulos mbr-text mbr-fonts-style display-7">
                         © TODOS LOS DERECHOS RESERVADOS A ICPP</p>
                 </div>
                 <div class="col-md-2">
