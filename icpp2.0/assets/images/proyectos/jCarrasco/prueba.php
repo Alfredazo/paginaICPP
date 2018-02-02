@@ -1,6 +1,6 @@
 <?php
   /*Pagina creada con el unico motivo de no escribir tanto en el Json al Actualizar Datos*/
-  $nombreCarpetaObra= 'aVillaseca';
+  $nombreCarpetaObra= 'jCarrasco';
 
   $total_imagenes = count(glob('../'.$nombreCarpetaObra.'/{*.jpg,*.gif,*.png,*.JPG}',GLOB_BRACE));
   echo 'Nombre Carpeta: '.$nombreCarpetaObra;

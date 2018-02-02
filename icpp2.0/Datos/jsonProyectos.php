@@ -44,7 +44,7 @@ $json = '[
                                 "../assets/images/proyectos/aVillaseca/21.jpg" ,
                                 "../assets/images/proyectos/aVillaseca/22.jpg" ,
                                 "../assets/images/proyectos/aVillaseca/23.jpg" ,
-                              "../assets/images/proyectos/aVillaseca/24.jpg"],
+                                "../assets/images/proyectos/aVillaseca/24.jpg"],
               "nombre_corto_obra":"Reparación Ascensor Villaseca"
           },
           {
@@ -57,32 +57,33 @@ $json = '[
                                     "../assets/images/servicio2.jpg",
                                     "../assets/images/servicio2.jpg"
                                  ],
-            "listado_titulo_imagen":[
-                                     "MANTENIMIENTO GRUA",
-                                     "CONSTRUCCIÓN EDIFICIO",
-                                     "EDIFICACIÓN GRUA"
-                                    ]
+          "nombre_corto_obra":"COYA"
           },
           {
             "numero_imagen":"3",
-            "nombre_obra":"J. CARRASCO",
-            "descripcion": "Obra Teatro",
-            "url_imagen": "assets/images/proyectos/gallery03.jpg",
-            "listado_imagenes":  [
-                                    "../assets/images/servicio2.jpg",
-                                    "../assets/images/servicio2.jpg",
-                                    "../assets/images/servicio2.jpg"
-                                 ],
-            "listado_titulo_imagen":[
-                                     "MANTENIMIENTO GRUA",
-                                     "CONSTRUCCIÓN EDIFICIO",
-                                     "EDIFICACIÓN GRUA"
-                                    ]
+            "nombre_obra":"Restauración Colegio Juan Carrasco",
+            "descripcion": "Se consulta el mejoramiento integral de la Escuela Básica Juan Carrasco Risco, contemplando en su totalidad hormigón armado con techumbres de estructuras metálicas y tabiques interiores de estructuras de Metal con, los cuales se dividen en áreas de intervención de 3.884m2.<br><br>En su totalidad el área de edificación corresponde a 1.611 m2, que se desglosan en las aulas de básica, Aulas Pre- Básica, Laboratorios, Salas de Uso múltiple, Biblioteca, Comedor, Servicios Higiénicos, Sala de Profesores y Oficinas Individuales tanto para el Director, UTP, Fonoaudiólogo, Psicólogo, Orientador, entre otros. Además, se contempla la adquisición de equipamientos, equipos y software del área educacional.",
+            "url_imagen": "assets/images/proyectos/jCarrasco/1.jpg",
+            "listado_imagenes": ["../assets/images/proyectos/jCarrasco/1.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/2.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/3.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/4.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/5.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/6.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/7.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/8.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/9.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/10.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/11.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/12.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/13.jpg" ,
+                                 "../assets/images/proyectos/jCarrasco/14.jpg"],
+            "nombre_corto_obra":"J. Carrasco"
           },
           {
             "numero_imagen":"4",
             "nombre_obra":"LAS AGUADA",
-            "descripcion": "Obra Teatro",
+            "descripcion": "asdasdasd",
             "url_imagen": "assets/images/proyectos/gallery03.jpg",
             "listado_imagenes":  [
                                     "../assets/images/servicio2.jpg",
