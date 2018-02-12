@@ -67,3 +67,19 @@
   padding-top: 75px;
   text-align: -webkit-center;
 }
+
+.botonProyectosURL{
+  margin-left: 40px;
+  border-radius: 10px;
+  background-color: #149dcc;
+  border-color: #149dcc;
+  padding: 2px;
+}
+
+.textoBotonProyecto{
+  color: #ffffff;
+  font-size: 20px;
+}
+.textoBotonProyecto:hover{
+  color: #e55600;
+}

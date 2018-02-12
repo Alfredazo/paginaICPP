@@ -125,7 +125,7 @@
       <br>
       <div class="media-container-row">
         <div class="col-12 col-md-12 col-lg-12">
-          <p class="textoServicios mbr-fonts-style display-7 centrarTexto">
+          <p class="alineacionDescripcion textoServicios mbr-fonts-style display-7 centrarTexto">
             <?php print_r($arraylistServicios[$numeroServicio]->descripcion) ?>
          </p>
         </div>

@@ -38,7 +38,6 @@
           console.log("Mi resolución de pantalla es: "+ + " px por "+screen.height);
         }
   </script>
-
 <body>
   <div>
     <section class="menu cid-qHcGPx0DPO" once="menu" id="menu2-i">
@@ -261,18 +260,32 @@
                 <div class="carousel-inner">
                   <!-- Dejar la primera Obra la nro 00 Activa-->
                   <div class="carousel-item active">
-                    <img src="<?php print_r($arraylist[0]->url_imagen);?>" alt="">
+                    <img src="<?php print_r($arraylist[0]->url_imagen);?>"alt="">
                     <span class="mbr-gallery-title mbr-fonts-style display-7">
-                      <?php print_r($arraylist[0]->nombre_obra);?>
-                      <a href="Servicio/servicio.php?id=0" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                      <div class="">
+                      <a href="Proyecto/proyecto.php?id=0"><?php print_r($arraylist[0]->nombre_obra);?></a>
+                      <button class="botonProyectosURL">
+                        <a class="textoBotonProyecto"href="<?php print_r("Proyecto/proyecto.php?id=".$arraylist[0]->numero_imagen);?>">
+                            SABER MÁS
+                        </a>
+                      </button>
+                      </div>
+
+
+                      <!--<a href="Proyecto/proyecto.php?id=0" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>-->
                     </span>
                   </div>
                   <?php for ($i=1; $i < sizeof($arraylist); $i++) {?>
                   <div class="carousel-item">
                     <img src="<?php print_r($arraylist[$i]->url_imagen);?>" alt="">
                     <span class="mbr-gallery-title mbr-fonts-style display-7">
-                      <?php print_r($arraylist[$i]->nombre_obra);?>
-                      <a href="Proyecto/proyecto.php?id=<?php print_r($arraylist[$i]->numero_imagen)?>" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>
+                      <a href="Proyecto/proyecto.php?id=<?php print_r($arraylist[$i]->numero_imagen)?>"><?php print_r($arraylist[$i]->nombre_obra);?></a>
+                      <!--<a href="Proyecto/proyecto.php?id=<?php print_r($arraylist[$i]->numero_imagen)?>" class="mbr-fonts-style display-7 moverDerecha text-warning">SABER MÁS</a>-->
+                      <div class="botonProyectosURL">
+                        <a href="<?php print_r("Proyecto/proyecto.php?id=".$arraylist[$i]->numero_imagen);?>">
+                            SABER MÁS
+                        </a>
+                      </div>
                     </span>
                   </div>
                 <?php }?>
